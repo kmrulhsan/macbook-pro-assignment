@@ -66,7 +66,7 @@ let isCouponApplied = false;
 function applyDiscount() {
   if (!isCouponApplied) {
     const couponCode = document.getElementById('couponCode').value;
-    const validCouponCode = 'PHERO10'
+    const validCouponCode = 'Stevekaku'
     const originalGrandTotal = parseFloat(document.getElementById('grand-total').innerText);
 
     if (couponCode === validCouponCode) {
