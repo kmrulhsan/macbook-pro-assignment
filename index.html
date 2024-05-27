@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+     <!--container creation for initial part  -->
+    <section class="container p-0">
+        <!-- dividing into parts -->
+        <div class="row">
+            <!-- image column  -->
+            <div class="col-6 text-center ">
+                <img src="mac.png" class="img-fluid" alt="">
+            </div>
+            <!-- text and other information column -->
+            <div class="col-6">
+                <div class="px-0">
+                    <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse Magic Keyboard US English.</p>
+                <!-- memory selection part start -->
+                <div class="row-6 my-4 px-0"> 
+                    <h6 class="px-0">Memory</h6>
+                    <div class="col p-0 d-inline">
+                        <button type="button" id="removeMemory" class="btn btn-outline-dark p-2 border-black">8GB Unified Memory</button>                   
+                     </div>
+                     <div class="col p-0 d-inline">
+                        <button type="button" id="addMemory" class="btn btn-outline-dark p-2 border-black">16GB Unified Memory</button>
+                     </div>
+                </div>
+                <!-- memory selection part end -->
+                <!-- storage selection part start -->
+                <div class="row-6 my-4 px-0"> 
+                    <h6 class="px-0">Storage</h6>
+                    <div class="col p-0 d-inline">
+                        <button type="button" id="addStorageFirst" class="btn btn-outline-dark p-2 border-black">256GB SSD Storage</button>                   
+                     </div>
+                     <div class="col p-0 d-inline">
+                        <button type="button" id="addStorageSecond" class="btn btn-outline-dark p-2 border-black">512GB SSD Storage</button>
+                     </div>
+                     <div class="col p-0 d-inline">
+                        <button type="button"  id="addStorageThird" class="btn btn-outline-dark p-2 border-black">1TB SSD Storage</button>
+                     </div>
+                </div>
+                <!-- storage selection part end -->
+                <!-- delivery option part start -->
+                <div class="row-6 my-4 px-0"> 
+                    <h6 class="px-0">Choose your delivery option</h6>
+                    <div class="col p-0 d-inline">
+                        <button type="button" id="freeDelivery" class="btn btn-outline-dark p-2 border-black">Friday, Aug 25 FREE Prime Delivery</button>                   
+                     </div>
+                     <div class="col p-0 d-inline">
+                        <button type="button" id="expressDelivery" class="btn btn-outline-dark p-2 border-black">Friday, Aug 21 Delivery Charge 20$</button>
+                     </div>
+                </div>
+                <!-- delivery ooption part end -->
+
+                <!-- cart add and remove sytem part start -->
+                <div class="w-50">
+                    <!-- best price part -->
+                    <div class="row mx-0 my-2"> 
+                        <div class="col-9 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">Best Price</h6>
+                        </div>
+                        <div class="col-3 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">$<span id="baseAmount" class="fw-bold">1299</span></h6>
+                        </div>
+                    </div>
+                    <!-- extra memory cost -->
+                    <div class="row mx-0 my-2"> 
+                        <div class="col-9 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">Extra Memory Cost</h6>
+                        </div>
+                        <div class="col-3 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">$<span id="memoryCost" class="fw-bold">0</span></h6>
+                        </div>
+                    </div>
+                    <!-- extra storage cost -->
+                    <div class="row mx-0 my-2"> 
+                        <div class="col-9 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">Extra Storage Cost</h6>
+                        </div>
+                        <div class="col-3 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">$<span id="storageCost" class="fw-bold">0</span></h6>
+                        </div>
+                    </div>
+                    <!-- Delivery charge -->
+                    <div class="row mx-0 my-2"> 
+                        <div class="col-9 px-0 border-bottom border-2 border-black">
+                        <h6 class="fw-bold">Delivery Charge</h6>
+                        </div>
+                        <div class="col-3 px-0 border-bottom border-2 border-black">
+                        <h6 class="fw-bold">$<span id="deliveryCost" class="fw-bold">0</span></h6>
+                        </div>
+                    </div>
+                    <!-- Total Price -->
+                    <div class="row mx-0 my-2 "> 
+                        <div class="col-9 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">Total Price</h6>
+                        </div>
+                        <div class="col-3 px-0 border-bottom border-dark-subtle">
+                        <h6 class="fw-bold">$<span id="totalPrice" class="fw-bold">0</span></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- promo code part -->
+                <div class="row-6 my-4 px-0"> 
+                    <h6 class="px-0">Add Promo Code</h6>
+                    <div class="col-3 p-0 d-inline">
+                        <input type="text" id="couponCode" >                 
+                     </div>
+                     <div class="col-3 p-0 d-inline">
+                        <input class="btn btn-danger" type="button" value="Apply" name="Submit" onclick="applyDiscount()">
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Total price section -->
+    <section class="container pt-3 text-center border-top  ">
+        <h2>Total: $<span id="grand-total">1299</span></h2>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
